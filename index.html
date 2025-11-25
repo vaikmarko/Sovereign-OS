@@ -407,14 +407,14 @@
                  <span class="text-gold-primary font-data text-2xl animate-pulse">✚</span>
                </div>
                
-               <div class="mt-auto">
+                 <div class="mt-auto">
                  <p class="text-gray-400 text-sm mb-8 leading-relaxed max-w-lg">
                    Custom-trained on 12,000 surgical procedures. Features a built-in RAG system for field amputation, dental reconstruction, and synthesizing antibiotics from raw organic matter.
                  </p>
                  <div class="grid grid-cols-2 gap-3 font-data text-[11px] text-gray-500 tracking-wide">
                    <div class="bg-black/40 border border-white/5 p-3 hover:border-gold-primary/30 transition-colors">>> REMOTE SURGERY GUIDE</div>
                    <div class="bg-black/40 border border-white/5 p-3 hover:border-gold-primary/30 transition-colors">>> ANTIBIOTIC CULTIVATION</div>
-                   <div class="bg-black/40 border border-white/5 p-3 hover:border-gold-primary/30 transition-colors">>> DENTAL RECONSTRUCTION</div>
+                   <div class="bg-black/40 border border-white/5 p-3 hover:border-gold-primary/30 transition-colors">>> BLOOD TYPE MATCHING</div>
                    <div class="bg-black/40 border border-white/5 p-3 hover:border-gold-primary/30 transition-colors">>> PSYCHOLOGICAL TRIAGE</div>
                    <div class="bg-black/40 border border-white/5 p-3 hover:border-gold-primary/30 transition-colors">>> CHRONIC CARE MGMT</div>
                    <div class="bg-black/40 border border-white/5 p-3 hover:border-gold-primary/30 transition-colors">>> HERBAL PHARMACOLOGY</div>
@@ -434,10 +434,10 @@
                  <span class="text-alert-red font-data text-xl">⌖</span>
                </div>
                <div class="flex gap-8 mt-4">
-                  <p class="text-gray-400 text-sm max-w-xs">Perimeter security engineering, counter-surveillance, drone operation/disabling, and ballistics trajectory calculation.</p>
+                  <p class="text-gray-400 text-sm max-w-xs">Military-grade autonomous surveillance integration. Includes thermal perimeter scanning, drone pathing algorithms, and counter-measure deployment protocols.</p>
                   <div class="flex-1 grid grid-cols-2 gap-2 font-data text-[10px] text-gray-500">
-                    <div class="border-l border-alert-red/30 pl-2">COUNTER-DRONE OPS</div>
-                    <div class="border-l border-alert-red/30 pl-2">INFRARED MASKING</div>
+                    <div class="border-l border-alert-red/30 pl-2">AUTONOMOUS DRONE OPS</div>
+                    <div class="border-l border-alert-red/30 pl-2">THERMAL MAPPING</div>
                     <div class="border-l border-alert-red/30 pl-2">PERIMETER TRAPS</div>
                     <div class="border-l border-alert-red/30 pl-2">BALLISTICS CALC</div>
                   </div>
@@ -597,12 +597,36 @@
                         <div class="font-data text-xs text-gold-primary mt-2">COMPLETE SYSTEM</div>
                     </div>
                     <div class="text-right mt-4 md:mt-0">
-                        <div class="font-luxury text-4xl text-white">$25,000</div>
-                        <div class="font-data text-xs text-gray-500 mt-1">USD / BTC / ETH</div>
+                        <div class="font-luxury text-4xl text-white">CONFIGURATION</div>
+                        <div class="font-data text-xs text-gray-500 mt-1">SELECT TIER</div>
                     </div>
                 </div>
 
                 <form class="space-y-6 text-left">
+                    <!-- Package Selection -->
+                    <div class="grid md:grid-cols-2 gap-4 mb-8">
+                        <label class="relative border border-gold-primary/30 bg-black/40 p-6 cursor-pointer hover:border-gold-primary transition-colors group">
+                            <input type="radio" name="package" value="standard" checked class="absolute top-4 right-4 accent-gold-primary">
+                            <div class="font-luxury text-xl text-white mb-2">STANDARD</div>
+                            <div class="font-data text-gold-primary text-lg mb-4">$25,000</div>
+                            <ul class="text-[10px] text-gray-400 font-data space-y-1">
+                                <li>>> RUGGEDIZED TOUGHBOOK</li>
+                                <li>>> BIO-CALIBRATION</li>
+                                <li>>> 48TB OFFLINE DB</li>
+                            </ul>
+                        </label>
+                        <label class="relative border border-gold-primary/30 bg-black/40 p-6 cursor-pointer hover:border-gold-primary transition-colors group">
+                            <input type="radio" name="package" value="overwatch" class="absolute top-4 right-4 accent-gold-primary">
+                            <div class="font-luxury text-xl text-white mb-2">OVERWATCH</div>
+                            <div class="font-data text-gold-primary text-lg mb-4">$45,000</div>
+                            <ul class="text-[10px] text-gray-400 font-data space-y-1">
+                                <li>>> EVERYTHING IN STANDARD</li>
+                                <li>>> AUTONOMOUS THERMAL DRONE</li>
+                                <li>>> PERIMETER LIDAR MAPPING</li>
+                            </ul>
+                        </label>
+                    </div>
+
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="font-data text-[10px] text-gold-primary tracking-widest mb-2 block">NAME</label>
@@ -617,6 +641,18 @@
                         <label class="font-data text-[10px] text-gold-primary tracking-widest mb-2 block">COUNTRY OF RESIDENCE (FOR LOGISTICS)</label>
                         <input type="text" name="country" class="w-full bg-black border border-white/20 p-4 text-white font-ui focus:border-gold-primary outline-none transition-colors">
                     </div>
+
+                    <!-- Updates Subscription -->
+                    <div class="border border-white/10 bg-white/5 p-4">
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" name="subscription" value="yes" class="mt-1 bg-black border-white/20 accent-gold-primary">
+                            <div>
+                                <span class="font-data text-xs text-white block mb-1">OPT-IN: QUARTERLY INTELLIGENCE DROPS (+$500/MO)</span>
+                                <p class="text-[10px] text-gray-500 font-data">Receive encrypted SSDs via courier containing updated medical protocols, threat intelligence, and software patches. Air-gap safe.</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="flex items-start gap-3 mt-4">
                         <input type="checkbox" name="deposit_acknowledged" required class="mt-1 bg-black border-white/20 accent-gold-primary">
                         <span class="text-xs text-gray-500 font-data">I UNDERSTAND A $2,500 NON-REFUNDABLE DEPOSIT IS REQUIRED TO START BIO-SEQUENCING.</span>
