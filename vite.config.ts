@@ -18,6 +18,15 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      }
+      },
+      build: {
+        rollupOptions: {
+          input: {
+            main: path.resolve(__dirname, 'index.html'),
+            drillProtocol: path.resolve(__dirname, 'drill-protocol.html'),
+            sentinelGrid: path.resolve(__dirname, 'sentinel-grid.html'),
+          },
+        },
+      },
     };
 });
