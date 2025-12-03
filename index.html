@@ -166,12 +166,32 @@
         </div>
         
         <!-- Desktop Menu -->
-        <div class="hidden xl:flex gap-16 font-data text-xs tracking-[0.2em] text-gray-500">
+        <div class="hidden xl:flex gap-12 font-data text-xs tracking-[0.2em] text-gray-500 items-center">
+          <!-- Products Dropdown -->
+          <div class="relative" x-data="{ prodOpen: false }">
+            <button @click="prodOpen = !prodOpen" class="flex items-center gap-2 hover:text-gold-primary transition-colors">
+              PRODUCTS
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div x-show="prodOpen" @click.away="prodOpen = false" x-transition
+                 class="absolute top-full left-0 mt-4 w-72 bg-bunker-panel border border-white/10 z-50">
+              <a href="/" class="block px-5 py-4 hover:bg-white/5 border-b border-white/5">
+                <span class="text-gold-primary font-bold">SOVEREIGN OS</span>
+                <span class="block text-[10px] text-gray-500 mt-1">Bio-integrated survival AI — $25,000</span>
+              </a>
+              <a href="/drill-protocol.html" class="block px-5 py-4 hover:bg-white/5 border-b border-white/5">
+                <span class="text-hologram-cyan font-bold">DRILL PROTOCOL</span>
+                <span class="block text-[10px] text-gray-500 mt-1">Real-time survival training app</span>
+              </a>
+              <a href="/sentinel-grid.html" class="block px-5 py-4 hover:bg-white/5">
+                <span class="text-alert-red font-bold">SENTINEL GRID</span>
+                <span class="block text-[10px] text-gray-500 mt-1">Autonomous perimeter defense</span>
+              </a>
+            </div>
+          </div>
           <a href="#philosophy" class="hover:text-gold-primary transition-colors">PHILOSOPHY</a>
-          <a href="#bio-integration" class="hover:text-gold-primary transition-colors flex items-center gap-2">
-            <span class="w-1 h-1 bg-gold-primary rounded-full animate-pulse"></span> PERSONALIZATION
-          </a>
-          <a href="#intelligence" class="hover:text-gold-primary transition-colors">INTELLIGENCE</a>
           <a href="#protocol" class="hover:text-gold-primary transition-colors">GET STARTED</a>
         </div>
 
@@ -199,14 +219,18 @@
            x-transition:leave-start="opacity-100 translate-y-0"
            x-transition:leave-end="opacity-0 -translate-y-2"
            class="xl:hidden bg-bunker-dark border-b border-white/10">
-           <div class="flex flex-col p-6 space-y-6 font-data text-sm tracking-[0.2em] text-gray-400">
+           <div class="flex flex-col p-6 space-y-4 font-data text-sm tracking-[0.2em] text-gray-400">
+               <!-- PRODUCTS Section -->
+               <div class="border-b border-white/10 pb-4 mb-2">
+                 <span class="text-[10px] text-gray-600 mb-3 block">PRODUCTS</span>
+                 <a href="/" @click="open = false" class="block py-2 text-gold-primary hover:text-white transition-colors">SOVEREIGN OS</a>
+                 <a href="/drill-protocol.html" @click="open = false" class="block py-2 text-hologram-cyan hover:text-white transition-colors">DRILL PROTOCOL</a>
+                 <a href="/sentinel-grid.html" @click="open = false" class="block py-2 text-alert-red hover:text-white transition-colors">SENTINEL GRID</a>
+               </div>
+               <!-- Page Links -->
                <a href="#philosophy" @click="open = false" class="hover:text-gold-primary transition-colors">PHILOSOPHY</a>
-               <a href="#bio-integration" @click="open = false" class="hover:text-gold-primary transition-colors flex items-center gap-2">
-                <span class="w-1 h-1 bg-gold-primary rounded-full animate-pulse"></span> PERSONALIZATION
-              </a>
-              <a href="#intelligence" @click="open = false" class="hover:text-gold-primary transition-colors">INTELLIGENCE</a>
-              <a href="#protocol" @click="open = false" class="hover:text-gold-primary transition-colors">GET STARTED</a>
-              <a href="#application" @click="open = false" class="text-gold-primary border border-gold-primary/30 p-3 text-center bg-white/5">START APPLICATION</a>
+               <a href="#protocol" @click="open = false" class="hover:text-gold-primary transition-colors">GET STARTED</a>
+               <a href="#application" @click="open = false" class="text-gold-primary border border-gold-primary/30 p-3 text-center bg-white/5 mt-2">START APPLICATION</a>
            </div>
       </div>
     </nav>
@@ -685,6 +709,8 @@
                 </div>
 
                 <form class="space-y-6 text-left">
+                    <input type="hidden" name="product" value="SOVEREIGN OS">
+                    <input type="hidden" name="form_type" value="application">
                     <!-- Package Selection -->
                     <div class="grid md:grid-cols-2 gap-4 mb-8">
                         <label class="relative border border-gold-primary/30 bg-black/40 p-6 cursor-pointer hover:border-gold-primary transition-colors group">
