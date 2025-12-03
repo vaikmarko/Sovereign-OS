@@ -170,7 +170,7 @@
         <div class="hidden xl:flex gap-12 font-data text-xs tracking-[0.2em] text-gray-500 items-center">
           <!-- Products Dropdown -->
           <div class="relative" x-data="{ prodOpen: false }">
-            <button @click="prodOpen = !prodOpen" class="flex items-center gap-2 hover:text-gold-primary transition-colors">
+            <button @click="prodOpen = !prodOpen" class="flex items-center gap-2 px-4 py-2 text-white border border-white/10 bg-white/5 hover:bg-white/10 hover:border-gold-primary hover:text-gold-primary transition-all">
               PRODUCTS
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -237,7 +237,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative min-h-[130vh] flex items-center pt-32 pb-48 overflow-hidden bg-void">
+    <header class="relative min-h-[130vh] flex items-center pt-32 pb-20 overflow-hidden bg-void">
       <div class="absolute inset-0 bg-hex-pattern opacity-20"></div>
       
       <!-- Animated Radar Background -->
@@ -262,7 +262,7 @@
             The world's first <strong>fully independent AI</strong>, customized to your health, family, and property. Protect your loved ones even when the internet, power grid, or government services fail.
           </p>
           
-          <div class="flex flex-col sm:flex-row gap-6 mb-24">
+          <div class="flex flex-col sm:flex-row gap-6 mb-12">
             <a href="#application" class="bg-gold-primary text-black px-10 py-5 font-data font-bold text-sm tracking-widest hover:bg-white transition-colors flex items-center justify-center gap-3 text-center">
               GET YOURS ($25,000)
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -337,7 +337,7 @@
     </header>
 
     <!-- The Gap (Why $25k) -->
-    <section id="philosophy" class="py-32 bg-bunker-dark border-y border-white/5 relative">
+    <section id="philosophy" class="pt-20 pb-32 bg-bunker-dark border-y border-white/5 relative">
       <div class="max-w-6xl mx-auto px-8 text-center">
         <h2 class="font-luxury text-3xl text-white mb-4">THE VULNERABILITY OF WEALTH</h2>
         <p class="font-ui text-gray-500 max-w-2xl mx-auto mb-16">In a major crisis, your net worth makes you a target, not a survivor. The rules change instantly.</p>
@@ -808,7 +808,7 @@
            <h4 class="font-data text-gold-primary text-xs tracking-widest mb-4">ACCESS</h4>
            <ul class="space-y-2 font-data text-xs text-gray-500">
              <li>INVITATION ONLY</li>
-             <li>SECURE COMMUNICATION</li>
+             <li><a href="mailto:base@svgnsystems.com" class="hover:text-white">base@svgnsystems.com</a></li>
            </ul>
         </div>
       </div>
