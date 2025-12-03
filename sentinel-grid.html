@@ -177,7 +177,7 @@
         <div class="hidden xl:flex gap-12 font-data text-xs tracking-[0.2em] text-gray-500 items-center">
           <!-- Products Dropdown -->
           <div class="relative" x-data="{ prodOpen: false }">
-            <button @click="prodOpen = !prodOpen" class="flex items-center gap-2 hover:text-alert-red transition-colors">
+            <button @click="prodOpen = !prodOpen" class="flex items-center gap-2 px-4 py-2 text-white border border-white/10 bg-white/5 hover:bg-white/10 hover:border-alert-red hover:text-alert-red transition-all">
               PRODUCTS
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -760,6 +760,7 @@
            <ul class="space-y-2 font-data text-xs text-gray-500">
              <li><a href="/legal/privacy.html" class="hover:text-white">PRIVACY POLICY</a></li>
              <li><a href="/legal/terms.html" class="hover:text-white">TERMS OF SERVICE</a></li>
+             <li class="pt-2"><a href="mailto:base@svgnsystems.com" class="hover:text-white">base@svgnsystems.com</a></li>
            </ul>
         </div>
       </div>
